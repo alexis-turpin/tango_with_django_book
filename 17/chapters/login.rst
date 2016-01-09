@@ -509,7 +509,7 @@ The direct approach checks to see whether a user is logged in, via the ``user.is
 .. code-block:: python
 	
 	def some_view(request):
-	    if not request.user.is_authenticated():
+	    if request.user.is_authenticated():
 	        return HttpResponse("You are logged in.")
 	    else:
 	        return HttpResponse("You are not logged in.")
